@@ -8,5 +8,21 @@ public class Solution1 {
      */
     public boolean compareStrings(String A, String B) {
         // write your code here
+        int[] aCount = new int[26];
+        int[] bCount = new int[26];
+
+        for (char ch : A.toCharArray()) {
+            aCount[ch - 'A']++;
+        }
+        for (char ch : B.toCharArray()) {
+            bCount[ch - 'A']++;
+        }
+
+        for (int i = 0; i < B.length(); i++) {
+            if (bCount[i] > aCount[i]) {
+                return false;
+            }
+        }
+        return true;
     }
 }
