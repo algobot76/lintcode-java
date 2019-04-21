@@ -14,21 +14,21 @@ public class Solution2 {
         int m = matrix.length;
         int n = matrix[0].length;
 
-        int left = matrix[0][0];
-        int right = matrix[m - 1][n - 1];
-        while (left <= right) {
-            int mid = left + (right - left) / 2;
+        int low = matrix[0][0];
+        int high = matrix[m - 1][n - 1];
+        while (low + 1 < high) {
+            int mid = (high + low) / 2;
             if (countLessOrEqual(matrix, mid) >= k) {
-                right = mid;
+                high = mid;
             } else {
-                left = mid;
+                low = mid;
             }
         }
-        if (countLessOrEqual(matrix, left) >= k) {
-            return left;
+        if (countLessOrEqual(matrix, low) >= k) {
+            return low;
         }
 
-        return right;
+        return high;
     }
 
     private int countLessOrEqual(int[][] matrix, int target) {
@@ -37,7 +37,7 @@ public class Solution2 {
         for (int[] row : matrix) {
             int start = 0;
             int end = row.length - 1;
-            while (start <= end) {
+            while (start + 1 < end) {
                 int mid = (start + end) / 2;
                 if (row[mid] > target) {
                     end = mid;
