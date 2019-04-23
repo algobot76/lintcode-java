@@ -1,7 +1,7 @@
 package com.algobot76.lintcode._401;
 
 /**
- * Two Pointers
+ * Binary Search
  */
 public class Solution2 {
     /**
