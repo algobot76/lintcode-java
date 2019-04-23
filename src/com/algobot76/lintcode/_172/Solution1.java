@@ -8,5 +8,18 @@ public class Solution1 {
      */
     public int removeElement(int[] A, int elem) {
         // write your code here
+        int l = 0;
+        int r = A.length - 1;
+
+        while (l <= r) {
+            if (A[l] == elem) {
+                A[l] = A[r];
+                r--;
+            } else {
+                l++;
+            }
+        }
+
+        return r + 1;
     }
 }
