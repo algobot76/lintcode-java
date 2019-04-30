@@ -46,7 +46,8 @@ public class ConnectingGraph2 {
     }
 
     private int find(int x) {
-        int p = x - 1;
+        x--;
+        int p = x;
 
         while (parents[p] != p) {
             p = parents[p];
