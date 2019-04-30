@@ -24,8 +24,8 @@ public class ConnectingGraph {
      */
     public void connect(int a, int b) {
         // write your code here
-        int parentA = find(--a);
-        int parentB = find(--b);
+        int parentA = find(a);
+        int parentB = find(b);
         if (parentA != parentB) {
             parents[parentA] = parentB;
         }
@@ -38,10 +38,11 @@ public class ConnectingGraph {
      */
     public boolean query(int a, int b) {
         // write your code here
-        return find(--a) == find(--b);
+        return find(a) == find(b);
     }
 
     private int find(int x) {
+        x--;
         int p = x;
 
         while (parents[p] != p) {
