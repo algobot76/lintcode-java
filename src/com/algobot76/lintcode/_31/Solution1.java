@@ -10,7 +10,6 @@ public class Solution1 {
      * @return: The index after partition
      */
     public int partitionArray(int[] nums, int k) {
-        // write your code here
         if (nums.length == 0) {
             return 0;
         }

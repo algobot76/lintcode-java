@@ -13,7 +13,6 @@ public class Solution1 {
      * @return: the median of numbers
      */
     public int[] medianII(int[] nums) {
-        // write your code here
         int n = nums.length;
         int[] ans = new int[n];
         int count = 0;

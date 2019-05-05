@@ -13,7 +13,6 @@ public class Solution1 {
      * @return a list of connections from results
      */
     public List<Connection> lowestCost(List<Connection> connections) {
-        // Write your code here
         connections.sort((a, b) -> {
             if (a.cost != b.cost) {
                 return a.cost - b.cost;

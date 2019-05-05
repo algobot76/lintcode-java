@@ -14,7 +14,6 @@ public class Solution2 {
      * @return: kth smallest element
      */
     public int kthSmallest(int k, int[] nums) {
-        // write your code here
         Queue<Integer> queue = new PriorityQueue<>(Comparator.reverseOrder());
 
         for (int i = 0; i < nums.length; i++) {

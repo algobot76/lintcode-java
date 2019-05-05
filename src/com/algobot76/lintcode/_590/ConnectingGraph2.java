@@ -11,7 +11,6 @@ public class ConnectingGraph2 {
      * @param n: An integer
      */
     public ConnectingGraph2(int n) {
-        // do intialization if necessary
         parents = new int[n];
         count = new int[n];
         for (int i = 0; i < n; i++) {
@@ -26,7 +25,6 @@ public class ConnectingGraph2 {
      * @return: nothing
      */
     public void connect(int a, int b) {
-        // write your code here
         int parentA = find(a);
         int parentB = find(b);
         if (parentA != parentB) {
@@ -40,7 +38,6 @@ public class ConnectingGraph2 {
      * @return: An integer
      */
     public int query(int a) {
-        // write your code here
         int parent = find(a);
         return count[parent];
     }

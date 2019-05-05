@@ -8,7 +8,6 @@ public class Solution1 {
      * @return: A list of strings
      */
     public List<String> anagrams(String[] strs) {
-        // write your code here
         List<String> ans = new ArrayList<>();
         if (strs == null || strs.length == 0) {
             return ans;

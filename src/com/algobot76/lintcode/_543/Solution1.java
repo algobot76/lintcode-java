@@ -13,7 +13,6 @@ public class Solution1 {
      * @return: an integer, K-th largest element in N arrays
      */
     public int KthInArrays(int[][] arrays, int k) {
-        // write your code here
         int n = arrays.length;
 
         Queue<Integer> pq = new PriorityQueue<>();

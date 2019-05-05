@@ -15,7 +15,6 @@ public class Solution1 {
      * @return: An integer
      */
     public int kthSmallestSum(int[] A, int[] B, int k) {
-        // write your code here
         int[] l1 = A.length <= B.length ? A : B;
         int[] l2 = A.length <= B.length ? B : A;
         int n = l1.length;

@@ -12,7 +12,6 @@ public class Solution1 {
      * @return: A string denote the minimum window, return "" if there is no such a string
      */
     public String minWindow(String source, String target) {
-        // write your code here
         if (target.length() == 0) {
             return "";
         }

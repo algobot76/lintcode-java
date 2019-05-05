@@ -10,7 +10,6 @@ public class Solution2 {
      * @return: the kth smallest number in the matrix
      */
     public int kthSmallest(int[][] matrix, int k) {
-        // write your code here
         int m = matrix.length;
         int n = matrix[0].length;
 

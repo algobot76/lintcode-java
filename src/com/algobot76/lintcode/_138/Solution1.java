@@ -14,7 +14,6 @@ public class Solution1 {
      * @return: A list of integers includes the index of the first number and the index of the last number
      */
     public List<Integer> subarraySum(int[] nums) {
-        // write your code here
         List<Integer> ans = new ArrayList<>();
         if (nums.length == 0) {
             return ans;

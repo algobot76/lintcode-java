@@ -10,7 +10,6 @@ public class Solution1 {
      * @return: the length of the longest common substring.
      */
     public int longestCommonSubstring(String A, String B) {
-        // write your code here
         int m = A.length();
         int n = B.length();
         int[][] f = new int[m + 1][n + 1];

@@ -10,7 +10,6 @@ public class Solution1 {
      * @return: The first position of target. Position starts from 0.
      */
     public int binarySearch(int[] nums, int target) {
-        // write your code here
         int left = 0;
         int right = nums.length - 1;
         while (left <= right) {

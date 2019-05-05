@@ -10,7 +10,6 @@ public class Solution1 {
      * @return: kth smallest element
      */
     public int kthSmallest(int k, int[] nums) {
-        // write your code here
         return quickSelect(nums, 0, nums.length - 1, k - 1);
     }
 

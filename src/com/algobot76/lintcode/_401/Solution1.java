@@ -14,7 +14,6 @@ public class Solution1 {
      * @return: return a integer
      */
     public int kthSmallest(int[][] matrix, int k) {
-        // write your code here
         int m = matrix.length;
         int n = matrix[0].length;
         Queue<Pair> pq = new PriorityQueue<>(Comparator.comparingInt(o -> matrix[o.i][o.j]));

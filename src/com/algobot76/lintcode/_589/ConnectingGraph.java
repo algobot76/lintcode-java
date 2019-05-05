@@ -23,7 +23,6 @@ public class ConnectingGraph {
      * @return: nothing
      */
     public void connect(int a, int b) {
-        // write your code here
         int parentA = find(a);
         int parentB = find(b);
         if (parentA != parentB) {

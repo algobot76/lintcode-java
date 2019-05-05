@@ -10,7 +10,6 @@ public class Solution1 {
      * @return: An integer
      */
     public int bitSwapRequired(int a, int b) {
-        // write your code here
         int count = 0;
 
         for (int c = a ^ b; c != 0; c = c >>> 1) {

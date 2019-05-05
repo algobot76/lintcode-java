@@ -7,7 +7,6 @@ public class Solution1 {
      * @return: if string A contains all of the characters in B return true else return false
      */
     public boolean compareStrings(String A, String B) {
-        // write your code here
         int[] aCount = new int[26];
         int[] bCount = new int[26];
 
