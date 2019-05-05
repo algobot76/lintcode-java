@@ -22,7 +22,7 @@ public class Solution1 {
 
         for (int i = 0; i < n; i++) {
             int num = nums[i];
-            maxHeap.add(num);
+            maxHeap.offer(num);
             if (count % 2 == 0) {
                 if (minHeap.isEmpty()) {
                     count++;
@@ -31,11 +31,11 @@ public class Solution1 {
                 } else if (maxHeap.peek() > minHeap.peek()) {
                     int maxHeapRoot = maxHeap.poll();
                     int minHeapRoot = minHeap.poll();
-                    maxHeap.add(minHeapRoot);
-                    minHeap.add(maxHeapRoot);
+                    maxHeap.offer(minHeapRoot);
+                    minHeap.offer(maxHeapRoot);
                 }
             } else {
-                minHeap.add(maxHeap.poll());
+                minHeap.offer(maxHeap.poll());
             }
             count++;
             ans[i] = maxHeap.peek();
