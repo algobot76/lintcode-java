@@ -8,6 +8,37 @@ public class Solution1 {
      * @return: the sum of leafnode
      */
     public int sumLeafNode(TreeNode root) {
-        // Write your code here
+        int sum = 0;
+
+        if (root == null) {
+            return sum;
+        }
+
+        TreeNode curr = root;
+        while (curr != null) {
+            if (curr.left == null && curr.right == null) {
+                sum += curr.val;
+            }
+            if (curr.left == null) {
+                curr = curr.right;
+            } else {
+                TreeNode temp = curr.left;
+                while (temp.right != null && temp.right != curr) {
+                    temp = temp.right;
+                }
+                if (temp.left == null && temp.right == null) {
+                    sum += temp.val;
+                }
+                if (temp.right == null) {
+                    temp.right = curr;
+                    curr = curr.left;
+                } else {
+                    temp.right = null;
+                    curr = curr.right;
+                }
+            }
+        }
+
+        return sum;
     }
 }
